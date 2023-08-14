@@ -3,14 +3,12 @@ import Image from "next/image";
 import ChangeRight from "@/images/arrowRight.png";
 import Right from "@/images/arrow-right.png";
 
-
 interface props {
     onClick?: () => void
     setNextButtonOnHover: (e: boolean) => void
     nextButtonOnHover: boolean
     rightClass?: string
     topClass?: string
-
 }
 
 const NextButton: React.FC<props> = (props) => {

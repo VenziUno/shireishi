@@ -166,7 +166,7 @@ const GamesById = () => {
                     </div>
 
                     <p className={'text-[24px] uppercase mt-[150px]'}>Download Link</p>
-                    <div className="flex gap-2 mt-[50px]">
+                    <div className="flex gap-2 mt-[50px] inline-flex">
                         {gameData?.download_link?.map((row: any, key: number) => (
                             <Link key={row.id} href={row.redirect_link}
                                   onMouseEnter={() => setHover(key)}

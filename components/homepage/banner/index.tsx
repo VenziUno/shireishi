@@ -149,7 +149,7 @@ const BannerLanding: React.FC<props> = ({assetLanding}) => {
                                 width={280}
                                 blurDataURL={row.thumbnail_link}
                                 placeholder={"blur"}
-                                className={`w-[300px] h-[200px] object-cover rounded-[10px] mx-auto ${key===activeIndex? 'border border-4 border-blue-500' :''}`}
+                                className={`w-[300px] h-[200px] object-cover rounded-[10px] mx-auto ${key===activeIndex? 'border-4 border-blue-500' :''}`}
                                 height={220}
                             />
                         </div>
