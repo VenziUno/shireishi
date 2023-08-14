@@ -90,7 +90,7 @@ const Detail: React.FC = () => {
                             <p className="text-[#163055] text-[18px] md:text-[36px] flex items-center gap-2">Neext Games
                                 News <SvgComponent type={'arrow-next'}/></p>
                             <div className="overflow-x-auto">
-                                <div className="mt-4 md:grid md:grid-cols-12 gap-4 flex inline-flex">
+                                <div className="mt-4 md:grid md:grid-cols-12 gap-4 flex">
                                     {landing && landing.news.filter((row: { id: number }) => row?.id !== detail?.id).map((rows: any, key: number) => (
                                         <div key={key}
                                              className={'lg:col-span-4 md:col-span-6 col-span-12 w-[400px] md:w-full xl:w-[400px] relative'}>

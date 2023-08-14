@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import {allDataLanding, detailBlog} from "@/interface/landing";
 import Slider from "react-slick";
 import {FacebookShareButton, FacebookShareCount, TwitterShareButton} from "react-share";
+import { LandingLoader } from "@/components/loader";
 
 const BlogId = () => {
 
@@ -18,8 +19,10 @@ const BlogId = () => {
     const [detailBlog, setDetailBlg] = useState<detailBlog>()
     const [moreBlog, setMoreBlog] = useState([])
     const [landing, setLanding] = useState<allDataLanding>();
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        setLoading(true)
         if (id && category) {
             axios.get(`${process.env.API_URL}/blog?id=${id}`).then((res) => {
                 setDetailBlg(res?.data?.data)
@@ -73,14 +76,11 @@ const BlogId = () => {
         )
     }
 
-
     const [active,setActive] = useState(false)
-
-    console.log(router)
-
 
     return (
         <>
+            <LandingLoader isLoading={loading}/>
             <Header/>
             <div className="mt-4 custom__container mx-auto">
                 <div className={'md:flex gap-[65px] mt-8'}>

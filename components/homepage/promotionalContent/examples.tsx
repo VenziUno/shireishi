@@ -62,23 +62,26 @@ export default  ExamplesCarousel;
 
 const Slide = React.memo(function (props: StackedCarouselSlideProps) {
     const {data, dataIndex, isCenterSlide, swipeTo, slideIndex} = props;
-    const [loadDelay, setLoadDelay] = React.useState<any>();
-    const [removeDelay, setRemoveDelay] = React.useState<any>();
-    const [loaded, setLoaded] = React.useState(false);
+    const [loaded, setLoaded] = React.useState(isCenterSlide);
+    const loadDelay = React.useRef<any>(null);
+    const removeDelay = React.useRef<any>(null);
+
     React.useEffect(() => {
         if (isCenterSlide) {
-            clearTimeout(removeDelay);
-            setLoadDelay(setTimeout(() => setLoaded(true), 1000));
+            clearTimeout(removeDelay.current);
+            loadDelay.current = setTimeout(() => setLoaded(true), 1000);
         } else {
-            clearTimeout(loadDelay);
-            if (loaded) setRemoveDelay(setTimeout(() => setLoaded(false), 1000));
+            clearTimeout(loadDelay.current);
+            if (loaded) {
+                removeDelay.current = setTimeout(() => setLoaded(false), 1000);
+            }
         }
-    }, [isCenterSlide, loadDelay, loaded, removeDelay]);
 
-    React.useEffect(() => () => {
-        clearTimeout(removeDelay);
-        clearTimeout(loadDelay);
-    });
+        return () => {
+            clearTimeout(removeDelay.current);
+            clearTimeout(loadDelay.current);
+        };
+    }, [isCenterSlide, loaded]);
 
     const {link} = data[dataIndex];
 
@@ -103,11 +106,10 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
                         src={`https://www.youtube.com/embed/${link.split('=')[1]}`}
                         className={'md:w-full w-full rounded-[30px] object-contain h-full'}
                     />
-
                 </div>
             )}
         </div>
     );
 });
 
-Slide.displayName = 'Slide'; // Provide a display name for the component
+Slide.displayName = 'Slide';

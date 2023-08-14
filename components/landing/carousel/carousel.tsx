@@ -105,7 +105,7 @@ const Carousel: React.FC<Props> = ({ banners }) => {
                   >
                     <Image
                       src={item.thumbnail_link}
-                      alt={""}
+                      alt={"image"}
                       width={282}
                       height={169}
                       className={`w-[300px] h-full hover:cursor-pointer object-cover`}

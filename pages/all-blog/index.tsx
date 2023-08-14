@@ -134,7 +134,7 @@ const AllBlogPage: React.FC = () => {
                                     {allBlog.map((row) => (
                                         <div
                                             key={row.id}
-                                            className={'bg-white col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-[10px] p-5'}>
+                                            className={'bg-white col-span-12 md:col-span-6 lg:col-span-4 rounded-[10px] p-5'}>
                                             <div className="">
                                                 <Image
                                                     src={row.file_link}
@@ -144,7 +144,7 @@ const AllBlogPage: React.FC = () => {
                                                     className={'w-full h-[240px] object-cover'}
                                                 />
                                             </div>
-                                            <Link key={row.id} href={`/all-blog/${row.id}?category=${row.category.id}`}>
+                                            <Link key={row.id} href={`all-blog/${row.id}?category=${row.category.id}`}>
                                                 <p className="font-[Candara] capitalize mt-[20px] font-bold text-[24px]">{row.title}</p>
                                             </Link>
                                             <div className="flex gap-2 items-center my-6 font-[Candara]">

@@ -23,7 +23,6 @@ class MyDocument extends Document {
                     gtag('config', 'G-TRXY819B3L');
                     `
                 }}
-
             />
         </Head>
           <body>

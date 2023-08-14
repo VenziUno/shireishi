@@ -1,7 +1,6 @@
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-import {useEffect, useState} from "react";
 import {Game} from "@/interface/landing";
 
 type ContainerProps = {
@@ -18,7 +17,7 @@ const GamesItemContainer: React.FC<ContainerProps> = ({ banner, children }) => {
     <>
         {banner?.name.toLowerCase()!=='coming soon' ? (
         <Link
-          href={`/games/${banner.id}`}
+          href={`games/${banner.id}`}
           // target="_blank"
           rel="noreferrer"
           className="relative overflow-hidden rounded-lg hover:scale-[1.05] transition-all ease-in duration-200 group"

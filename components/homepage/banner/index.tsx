@@ -1,10 +1,6 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useState} from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import ChangeLeft from "@/images/arrowLeft.png";
-import Left from "@/images/arrow-left.png";
-import ChangeRight from "@/images/arrowRight.png";
-import Right from "@/images/arrow-right.png";
 import NextButton from "@/components/common/nextButton";
 import PreviewButton from "@/components/common/previewButton";
 import {Banner} from "@/interface/landing";

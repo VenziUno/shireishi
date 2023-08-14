@@ -13,7 +13,6 @@ import NewsComponent from "@/components/homepage/News";
 import { allDataLanding } from "@/interface/landing";
 import Carousel from "@/components/landing/carousel/carousel";
 import Examples from "@/components/homepage/promotionalContent/examples";
-
 export default function Home() {
   const [landing, setLanding] = useState<allDataLanding>();
   const [loading, setLoading] = useState(true);
@@ -56,7 +55,6 @@ export default function Home() {
               blogCategory={landing.blogCategory}
             />
             <FollowUs />
-
             <ContactUs email={landing.web_profile.contact_us} />
           </main>
           <Footer social_media={landing.social_media} />
