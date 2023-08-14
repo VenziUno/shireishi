@@ -28,7 +28,7 @@ export const LandingLoader: React.FC<Props> = ({ isLoading }) => {
       >
         <Image
           className="cursor-pointer"
-          src={Logo}
+          src={'/images/logo.png'}
           alt="Shireishi"
           layout="fixed"
           width={200}
