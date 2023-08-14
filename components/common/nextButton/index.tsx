@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from 'next/legacy/image';
 import ChangeRight from "@/images/arrowRight.png";
 import Right from "@/images/arrow-right.png";
 

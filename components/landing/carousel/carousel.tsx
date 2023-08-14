@@ -2,7 +2,7 @@ import Left from "@/images/arrow-left.png";
 import Right from "@/images/arrow-right.png";
 import ChangeLeft from "@/images/arrowLeft.png";
 import ChangeRight from "@/images/arrowRight.png";
-import Image from "next/image";
+import Image from 'next/legacy/image';
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";

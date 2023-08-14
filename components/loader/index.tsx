@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from 'next/legacy/image'
+
 import 'animate.css'
 
 import Logo from "@/images/logo.png";
@@ -30,7 +31,7 @@ export const LandingLoader: React.FC<Props> = ({ isLoading }) => {
           className="cursor-pointer"
           src={'/images/logo.png'}
           alt="Shireishi"
-          layout="fixed"
+          layout="fill"
           width={200}
           height={200}
         />

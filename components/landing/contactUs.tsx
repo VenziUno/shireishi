@@ -1,6 +1,6 @@
 import Link from "next/link";
 import InboxIcon from "@/images/inbox.png";
-import Image from "next/image";
+import Image from 'next/legacy/image';
 
 interface Props {
   email: string;

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/legacy/image';
 import ChangeLeft from "@/images/arrowLeft.png";
 import Left from "@/images/arrow-left.png";
 import React from "react";
