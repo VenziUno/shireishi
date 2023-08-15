@@ -35,6 +35,8 @@ const PreviewButton: React.FC<Props> = ({
                 layout="fixed"
                 src={prevButtonOnHover ? ChangeLeft : Left}
                 alt="left"
+                width={36}
+                height={36}
                 className="max-w-[36px]"
             />
         </button>
