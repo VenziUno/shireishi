@@ -14,11 +14,11 @@ const Header: React.FC = () => {
         <div>
           <Link href="/">
             <Image
-                className="cursor-pointer xl:w-[80px] w-[60px]"
+                className="cursor-pointer xl:w-[80px] w-[80px]"
                 src={Logo}
                 alt="Shireishi"
-                width={100}
-                height={40}
+                width={80}
+                height={80}
             />
           </Link>
         </div>
@@ -42,9 +42,8 @@ const Header: React.FC = () => {
                 className="cursor-pointer"
                 src={Logo}
                 alt="Crypto Wallet"
-                layout="fixed"
                 width={100}
-                height={40}
+                height={100}
                 onClick={() => setIsOpen(false)}
               />
             </div>
