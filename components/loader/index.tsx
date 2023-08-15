@@ -2,7 +2,7 @@ import Image from 'next/legacy/image'
 
 import 'animate.css'
 
-import Logo from "@/images/logo.png";
+// import Logo from "@/images/logo.png";
 import { useEffect, useState } from "react";
 interface Props {
   isLoading: boolean;
@@ -10,6 +10,8 @@ interface Props {
 
 export const LandingLoader: React.FC<Props> = ({ isLoading }) => {
   const [display, setDisplay] = useState(true)
+
+  const Logo = require('../../public/images/logo.png');
 
   const hide = async (ms: number) => {
     await new Promise((r) => setTimeout(r, ms));
@@ -29,7 +31,7 @@ export const LandingLoader: React.FC<Props> = ({ isLoading }) => {
       >
         <Image
           className="cursor-pointer"
-          src='/favicon.ico'
+          src={Logo}
           alt="Shireishi"
           layout="fixed"
           width={200}
