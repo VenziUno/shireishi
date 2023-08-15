@@ -29,7 +29,7 @@ export const LandingLoader: React.FC<Props> = ({ isLoading }) => {
       >
         <Image
           className="cursor-pointer"
-          src={'/images/inbox.svg'}
+          src={'/favicon.ico'}
           alt="Shireishi"
           layout="fixed"
           width={200}
