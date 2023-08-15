@@ -22,7 +22,7 @@ const ContactUs: React.FC<Props> = ({ email }) => {
             target="_blank"
             className="flex gap-2 items-center justify-center">
             <div className="max-w-[16px]">
-              <Image src={InboxIcon} alt='inbox' />
+              <Image layout="fixed" src={InboxIcon} alt='inbox' />
             </div>
             <p className="text-center text-base sm:text-lg md:text-xl candara text-[#292929] underline">
               {email}

@@ -182,7 +182,7 @@ const NewsComponent: React.FC<props> = ({ news, blogCategory }) => {
                     className="rounded-[10px] p-14 bg-white font-[Candara]"
                   >
                     <div className="w-full h-full mx-auto rounded-[10px]">
-                      <Image
+                      <Image layout="fixed"
                         src={row.file_link}
                         alt={"image"}
                         width={300}

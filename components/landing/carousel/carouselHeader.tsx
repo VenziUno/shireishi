@@ -25,10 +25,10 @@ const CarouselHeader: React.FC<Props> = ({ data }) => {
       <div className="order-1 md:order-2 md:w-1/2 md:px-0">
         {data.redirect_link ? (
           <Link href={data.redirect_link} target="_blank" rel="noreferrer">
-            <Image src={data.file_link} width={686} height={394} alt="image" className={'w-full h-[250px] object-cover'} />
+            <Image layout="fixed" src={data.file_link} width={686} height={394} alt="image" className={'w-full h-[250px] object-cover'} />
           </Link>
         ) : (
-          <Image src={data.file_link} width={686} height={394} alt="image"  className={'w-full h-[250px] object-cover'} />
+          <Image layout="fixed" src={data.file_link} width={686} height={394} alt="image"  className={'w-full h-[250px] object-cover'} />
         )}
       </div>
     </div>

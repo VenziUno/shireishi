@@ -35,7 +35,7 @@ const SliderComponent: React.FC<props> = ({gameData}) => {
                             >
                                 {gameData.photo.map((row: any) => (
                                     <div className="px-[10px]" key={row.id}>
-                                        <Image
+                                        <Image layout="fixed"
                                             src={row.file_link}
                                             alt={'image'}
                                             width={780}
@@ -74,7 +74,7 @@ const SliderComponent: React.FC<props> = ({gameData}) => {
                     >
                         {gameData.photo.map((row: any) => (
                             <div key={row.id}>
-                                <Image
+                                <Image layout="fixed"
                                     src={row.file_link}
                                     alt={'image'}
                                     width={300}

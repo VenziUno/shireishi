@@ -13,7 +13,7 @@ const Header: React.FC = () => {
       <div className="flex sm:items-center justify-between items-center custom__container">
         <div>
           <Link href="/">
-            <Image
+            <Image layout="fixed"
                 className="cursor-pointer xl:w-[80px] w-[80px]"
                 src={Logo}
                 alt="Shireishi"
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         <div className="flex items-center lg:my-6 justify-between bg-primary p-5">
           <Link href="/">
             <div className="logo__container flex">
-              <Image
+              <Image layout="fixed"
                 className="cursor-pointer"
                 src={Logo}
                 alt="Crypto Wallet"

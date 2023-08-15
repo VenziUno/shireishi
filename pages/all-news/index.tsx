@@ -46,7 +46,7 @@ const AllNews: React.FC = () => {
       <Header />
       <div className="relative">
         <div className="relative w-full h-[300px] z-[10] bg-gradient-to-r from-[#000000] to-[#000000]">
-          <Image
+          <Image layout="fixed"
             src={"/images/newss-bg.png"}
             alt={"blog banner"}
             width={1024}
@@ -115,7 +115,7 @@ const AllNews: React.FC = () => {
                 }`}
               >
                 <div className="">
-                  <Image
+                  <Image layout="fixed"
                     src={row.file_link}
                     alt={`image ${row.title}`}
                     width={440}

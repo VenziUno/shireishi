@@ -55,7 +55,7 @@ const GamesById = () => {
                 <div className="relative bg-promotional w-full h-[1100px]">
                     {dataSelected &&
                         <div className="absolute top-0 w-full h-full z-10">
-                            <Image
+                            <Image layout="fixed"
                                 src={dataSelected.file_link}
                                 alt={'imag'}
                                 width={1920}
@@ -95,7 +95,7 @@ const GamesById = () => {
 
             <div className=" p-4 w-full relative z-30">
                 <div className="absolute w-full left-0 top-[-120px] z-20 ">
-                    <Image
+                    <Image layout="fixed"
                         src={'/images/corak1.png'}
                         alt={'corak'}
                         width={1920}
@@ -193,7 +193,7 @@ const GamesById = () => {
                                         className={`${key == 0 ? 'col-span-12 lg:col-span-5 md:row-span-2' : 'w-full md:col-span-4 lg:col-span-4'} my-4 md:my-0`}
                                         key={key}>
                                         <div className="relative overflow-hidden">
-                                            <Image
+                                            <Image layout="fixed"
                                                 src={row.file_link}
                                                 alt={'image'}
                                                 width={500}
@@ -248,7 +248,7 @@ const GamesById = () => {
                         {listGames.filter((rows:{id:number,title:string})=>rows.id!==Number(id)).filter((res:{name:string})=>res.name!=='Coming Soon').map((row: any) => (
                             <div key={row.id} className={'lg:col-span-4 md:col-span-6 col-span-12'}>
                                 <Link href={`/games/${row.id}`} className="">
-                                    <Image
+                                    <Image layout="fixed"
                                         src={row.cover_link}
                                         alt={'image'}
                                         width={450}

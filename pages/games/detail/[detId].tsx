@@ -55,7 +55,7 @@ const Detail: React.FC = () => {
                             <p className={'p-1 px-6 bg-red-500 text-white'}>{detail.category.name}</p>
                         </div>
                         <div className=" mt-8">
-                            <Image
+                            <Image layout="fixed"
                                 src={detail.file_link}
                                 alt={'image'}
                                 width={1024}
@@ -94,7 +94,7 @@ const Detail: React.FC = () => {
                                     {landing && landing.news.filter((row: { id: number }) => row?.id !== detail?.id).map((rows: any, key: number) => (
                                         <div key={key}
                                              className={'lg:col-span-4 md:col-span-6 col-span-12 w-[400px] md:w-full xl:w-[400px] relative'}>
-                                            <Image
+                                            <Image layout="fixed"
                                                 src={rows.file_link} alt={'img'}
                                                 width={430}
                                                 height={315}

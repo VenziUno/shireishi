@@ -37,7 +37,7 @@ const GamesItem: React.FC<GamesProps> = ({ banner }) => {
           } shadow-2xl flex items-center justify-center text-3xl relative`}
       >
         {banner?.cover_link && (
-          <Image
+          <Image layout="fixed"
             src={banner.cover_link}
             alt="banner"
             width={400}

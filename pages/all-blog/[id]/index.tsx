@@ -100,7 +100,7 @@ const BlogId = () => {
                                 {detailBlog.image.map((row: any, key) => (
                                     <div className='px-4' key={key}>
                                         <div key={row.id} className={'w-full mx-auto md:px-0'}>
-                                            <Image
+                                            <Image layout="fixed"
                                                 src={row.file_link}
                                                 alt={row.caption}
                                                 width={1067}
@@ -117,7 +117,7 @@ const BlogId = () => {
                         }
                         {detailBlog && detailBlog.image.length === 0 &&
                             <div className="px-4">
-                                <Image
+                                <Image layout="fixed"
                                     src={detailBlog.file_link}
                                     alt={'image detail'}
                                     width={1067}
@@ -196,7 +196,7 @@ const BlogId = () => {
                                     <Link href={`//all-blog/${row.id}?category=${row?.blog_categories_id}`} className={`${key > 0 ? 'mt-[20px]' : ''}`} key={key}>
                                         {key > 0 && <div className="h-[2px] my-4 bg-gray-400 w-full"/>}
                                         <div className={'w-full'}>
-                                            <Image
+                                            <Image layout="fixed"
                                                 src={row.file_link}
                                                 alt={row.title}
                                                 width={720}

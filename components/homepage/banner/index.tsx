@@ -61,7 +61,7 @@ const BannerLanding: React.FC<props> = ({assetLanding}) => {
                     {assetLanding.map((row,key:number) => (
                         <Link href={`/games/${row.id}`} key={key}>
                             <div key={row.id} className={'relative'}>
-                                <Image
+                                <Image layout="fixed"
                                     alt={'image'}
                                     width={1920}
                                     src={row.file_link}
@@ -93,7 +93,7 @@ const BannerLanding: React.FC<props> = ({assetLanding}) => {
             }
 
             <div className="w-full h-[100px] absolute bottom-[0px]">
-                <Image
+                <Image layout="fixed"
                     src={'/images/newbg-blur.png'}
                     alt={'image'}
                     width={1920}
@@ -140,7 +140,7 @@ const BannerLanding: React.FC<props> = ({assetLanding}) => {
                         <div
                             key={row.id} className={`relative w-[340px] px-2 h-[200px] rounded-[10px] overflow-hidden`}
                         >
-                            <Image
+                            <Image layout="fixed"
                                 src={row.thumbnail_link} alt={'thumbnail'}
                                 width={280}
                                 blurDataURL={row.thumbnail_link}

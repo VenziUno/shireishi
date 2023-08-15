@@ -77,7 +77,7 @@ const AllBlogPage: React.FC = () => {
                             <div
                                 className="relative w-full h-[300px] z-[10] bg-gradient-to-r from-[#000000] to-[#000000]"
                             >
-                                <Image
+                                <Image layout="fixed"
                                     src={'/images/blog-banner.png'}
                                     alt={'blog banner'}
                                     width={1024}
@@ -136,7 +136,7 @@ const AllBlogPage: React.FC = () => {
                                             key={row.id}
                                             className={'bg-white col-span-12 md:col-span-6 lg:col-span-4 rounded-[10px] p-5'}>
                                             <div className="">
-                                                <Image
+                                                <Image layout="fixed"
                                                     src={row.file_link}
                                                     alt={'image'}
                                                     width={365}

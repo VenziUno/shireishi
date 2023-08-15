@@ -12,7 +12,7 @@ const Footer: React.FC<Props> = ({ social_media }) => {
     <div className="footer__background z-50 relative">
       <div className="flex flex-col lg:flex-row justify-between items-center py-5 sm:px-44 px-24 gap-6 lg:gap-0">
         <Link href="/">
-          <Image
+          <Image layout="fixed"
             className="cursor-pointer"
             src={Logo}
             alt="Shireishi"
@@ -32,7 +32,7 @@ const Footer: React.FC<Props> = ({ social_media }) => {
                   key={index}
                 >
                   <div className="p-2 bg-[#d9d9d9] w-fit rounded-[20%] hover:scale-[1.15] transition-all ease-in">
-                    <Image
+                    <Image layout="fixed"
                       src={item.file_link}
                       alt="facebook"
                       width={20}

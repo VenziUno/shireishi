@@ -21,7 +21,7 @@ const SteamCopy: React.FC<props> = ({gameData,dataSelected,setDataSelected}) => 
             <div className="md:flex gap-[60px]">
                 <div className="md:w-1/2">
                     {dataSelected &&
-                        <Image
+                        <Image layout="fixed"
                             src={dataSelected.file_link}
                             alt={'img selected'}
                             width={780}
@@ -47,7 +47,7 @@ const SteamCopy: React.FC<props> = ({gameData,dataSelected,setDataSelected}) => 
                             }}
                             className={`w-[200px] cursor-pointer`}
                         >
-                            <Image
+                            <Image layout="fixed"
                                 src={row.file_link}
                                 alt={'image'}
                                 width={195}

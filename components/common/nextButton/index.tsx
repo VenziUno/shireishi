@@ -19,7 +19,7 @@ const NextButton: React.FC<props> = (props) => {
             className={`absolute ${rightClass} ${topClass}`} onMouseEnter={() => setNextButtonOnHover(true)}
             onMouseLeave={() => setNextButtonOnHover(false)}
         >
-            <Image
+            <Image layout="fixed"
                 src={nextButtonOnHover ? ChangeRight : Right}
                 alt="left"
                 className="max-w-[36px]"

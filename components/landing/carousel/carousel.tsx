@@ -74,7 +74,7 @@ const Carousel: React.FC<Props> = ({ banners }) => {
             onMouseEnter={() => setPrevButtonOnHover(true)}
             onMouseLeave={() => setPrevButtonOnHover(false)}
           >
-            <Image
+            <Image layout="fixed"
                 src={prevButtonOnHover ? ChangeLeft : Left}
                 alt="left"
                 className="max-w-[36px]"
@@ -85,7 +85,7 @@ const Carousel: React.FC<Props> = ({ banners }) => {
             onMouseEnter={() => setNextButtonOnHover(true)}
             onMouseLeave={() => setNextButtonOnHover(false)}
           >
-            <Image
+            <Image layout="fixed"
               src={nextButtonOnHover ? ChangeRight : Right}
               alt="left"
               className="max-w-[36px]"
@@ -103,7 +103,7 @@ const Carousel: React.FC<Props> = ({ banners }) => {
                       } h-[158px] transition-all ease-in-out duration-750`}
                     onClick={() => handleSliderItemOnClick(index)}
                   >
-                    <Image
+                    <Image layout="fixed"
                       src={item.thumbnail_link}
                       alt={"image"}
                       width={282}
