@@ -40,8 +40,8 @@ const GamesItem: React.FC<GamesProps> = ({ banner }) => {
           <Image layout="fixed"
             src={banner.cover_link}
             alt="banner"
-            width={400}
-            height={400}
+            width={450}
+            height={300}
             className=""
           />
         )}

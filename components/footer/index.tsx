@@ -12,11 +12,11 @@ const Footer: React.FC<Props> = ({ social_media }) => {
     <div className="footer__background z-50 relative">
       <div className="flex flex-col lg:flex-row justify-between items-center py-5 sm:px-44 px-24 gap-6 lg:gap-0">
         <Link href="/">
-          <Image layout="fixed"
+          <Image 
+            layout="fixed"
             className="cursor-pointer"
             src={Logo}
             alt="Shireishi"
-            layout="fixed"
             width={60}
             height={40}
           />
