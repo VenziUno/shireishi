@@ -1,45 +1,49 @@
+import React, { useState } from "react";
 import Image from 'next/legacy/image';
-import React from "react";
 
-
-interface props {
-    onClick?: () => void
-    setPrevButtonOnHover: (e: boolean) => void
-    prevButtonOnHover: boolean
-    leftClass?: string
-    topClass?: string
+interface Props {
+    onClick?: () => void;
+    leftClass?: string;
+    topClass?: string;
 }
 
-const PreviewButton: React.FC<props> = (props) => {
-    const {onClick, setPrevButtonOnHover, prevButtonOnHover,leftClass,topClass} = props
-    const ChangeLeft = require('../../../public/images/arrowLeft.png');
-    const Left  = require('../../../public/images/arrow-left.png');
+const PreviewButton: React.FC<Props> = ({
+    onClick,
+    leftClass,
+    topClass
+}) => {
+    const ChangeLeft = '/images/arrowLeft.png';
+    const Left = '/images/arrow-left.png';
+    const [prevButtonOnHover, setPrevButtonOnHover] = useState<boolean>(false);
+
+    const handleMouseEnter = () => {
+        setPrevButtonOnHover(true);
+    };
+
+    const handleMouseLeave = () => {
+        setPrevButtonOnHover(false);
+    };
+
     return (
         <button
             onClick={onClick}
-            className={`absolute z-[10] ${leftClass} ${topClass}`} onMouseEnter={() => setPrevButtonOnHover(true)}
-            onMouseLeave={() => setPrevButtonOnHover(false)}
+            className={`absolute z-[10] ${leftClass} ${topClass}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
-            {prevButtonOnHover ? (
-                <Image layout="fixed"
-                    src={ChangeLeft}
-                    alt="left"
-                    className="max-w-[36px]"
-                />
-            ) : (
-                <Image layout="fixed"
-                    src={Left}
-                    alt="left"
-                    className="max-w-[36px]"
-                />
-            )}
+            <Image
+                layout="fixed"
+                src={prevButtonOnHover ? ChangeLeft : Left}
+                alt="left"
+                className="max-w-[36px]"
+            />
         </button>
-    )
-}
-
-export default PreviewButton
+    );
+};
 
 PreviewButton.defaultProps = {
     leftClass: 'left-[5%]',
-    topClass: 'top-[42%]',
-}
+    topClass: 'top-[42%]'
+};
+
+export default PreviewButton;

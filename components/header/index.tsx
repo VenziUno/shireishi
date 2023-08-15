@@ -1,13 +1,12 @@
 import Image from 'next/legacy/image';
 import Link from "next/link";
 import { useState } from "react";
-import Logo from "@/images/logo.png";
 import Navigation from "./navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const Logo = require('../../public/images/logo.png');
   return (
     <div className="relative top-0 z-50 header__background py-1 w-full px-4 md:px-0">
       <div className="flex sm:items-center justify-between items-center custom__container">
