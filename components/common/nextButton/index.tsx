@@ -12,18 +12,27 @@ interface props {
 }
 
 const NextButton: React.FC<props> = (props) => {
-    const {onClick, setNextButtonOnHover, nextButtonOnHover, rightClass, topClass} = props
+    const { onClick, setNextButtonOnHover, nextButtonOnHover, rightClass, topClass } = props
     return (
         <button
             onClick={onClick}
             className={`absolute ${rightClass} ${topClass}`} onMouseEnter={() => setNextButtonOnHover(true)}
             onMouseLeave={() => setNextButtonOnHover(false)}
         >
-            <Image layout="fixed"
-                src={nextButtonOnHover ? ChangeRight : Right}
-                alt="left"
-                className="max-w-[36px]"
-            />
+            {nextButtonOnHover ? (
+                <Image layout="fixed"
+                    src={ChangeRight}
+                    alt="left"
+                    className="max-w-[36px]"
+                />
+            ) : (
+                <Image layout="fixed"
+                    src={Right}
+                    alt="left"
+                    className="max-w-[36px]"
+                />
+            )}
+
         </button>
     )
 }

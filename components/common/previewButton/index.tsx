@@ -20,11 +20,19 @@ const PreviewButton: React.FC<props> = (props) => {
             className={`absolute z-[10] ${leftClass} ${topClass}`} onMouseEnter={() => setPrevButtonOnHover(true)}
             onMouseLeave={() => setPrevButtonOnHover(false)}
         >
-            <Image layout="fixed"
-                src={prevButtonOnHover ? ChangeLeft : Left}
-                alt="left"
-                className="max-w-[36px]"
-            />
+            {prevButtonOnHover ? (
+                <Image layout="fixed"
+                    src={ChangeLeft}
+                    alt="left"
+                    className="max-w-[36px]"
+                />
+            ) : (
+                <Image layout="fixed"
+                    src={Left}
+                    alt="left"
+                    className="max-w-[36px]"
+                />
+            )}
         </button>
     )
 }
