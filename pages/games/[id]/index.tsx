@@ -47,7 +47,7 @@ const GamesById = () => {
 
     }, [id])
 
-    const corak = require('../../public/images/corak1.png');
+    const corak = require('../../../public/images/corak1.png');
 
     return (
         <>

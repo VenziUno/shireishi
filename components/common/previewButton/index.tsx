@@ -12,8 +12,8 @@ interface props {
 
 const PreviewButton: React.FC<props> = (props) => {
     const {onClick, setPrevButtonOnHover, prevButtonOnHover,leftClass,topClass} = props
-    const ChangeLeft = require('../../../public/images/arrowRight.png');
-    const Left  = require('../../../public/images/arrow-right.png');
+    const ChangeLeft = require('../../../public/images/arrowLeft.png');
+    const Left  = require('../../../public/images/arrow-left.png');
     return (
         <button
             onClick={onClick}
