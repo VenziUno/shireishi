@@ -12,8 +12,8 @@ const PreviewButton: React.FC<Props> = ({
     leftClass,
     topClass
 }) => {
-    const ChangeLeft = '/images/arrowLeft.png';
-    const Left = '/images/arrow-left.png';
+    const ChangeLeft = require('/images/arrowLeft.png');
+    const Left = require('/images/arrow-left.png');
     const [prevButtonOnHover, setPrevButtonOnHover] = useState<boolean>(false);
 
     const handleMouseEnter = () => {
@@ -35,8 +35,8 @@ const PreviewButton: React.FC<Props> = ({
                 layout="fixed"
                 src={prevButtonOnHover ? ChangeLeft : Left}
                 alt="left"
-                width={38}
-                height={38}
+                width={36}
+                height={36}
                 className="max-w-[36px]"
             />
         </button>

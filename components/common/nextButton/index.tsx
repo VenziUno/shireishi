@@ -8,8 +8,8 @@ interface Props {
 }
 
 const NextButton: React.FC<Props> = ({ onClick, rightClass, topClass }) => {
-    const ChangeRight = '/images/arrowRight.png';
-    const Right = '/images/arrow-right.png';
+    const ChangeRight = require('/images/arrowRight.png');
+    const Right = require('/images/arrow-right.png');
     const [nextButtonOnHover, setNextButtonOnHover] = useState<boolean>(false);
 
     const handleMouseEnter = () => {
