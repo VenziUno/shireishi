@@ -1,7 +1,5 @@
 import React from "react";
 import Image from 'next/legacy/image';
-import ChangeRight from "@/images/arrowRight.png";
-import Right from "@/images/arrow-right.png";
 
 interface props {
     onClick?: () => void
@@ -13,6 +11,8 @@ interface props {
 
 const NextButton: React.FC<props> = (props) => {
     const { onClick, setNextButtonOnHover, nextButtonOnHover, rightClass, topClass } = props
+    const ChangeRight = require('../../../public/images/arrowRight.png');
+    const Right  = require('../../../public/images/arrow-right.png');
     return (
         <button
             onClick={onClick}

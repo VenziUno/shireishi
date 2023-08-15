@@ -40,6 +40,8 @@ const AllNews: React.FC = () => {
       });
   }, [game_id, searchs]);
 
+  const newsBg = require('../../public/images/newss-bg.png');
+
   return (
     <>
       <LandingLoader isLoading={loading} />
@@ -47,7 +49,7 @@ const AllNews: React.FC = () => {
       <div className="relative">
         <div className="relative w-full h-[300px] z-[10] bg-gradient-to-r from-[#000000] to-[#000000]">
           <Image layout="fixed"
-            src={"/images/newss-bg.png"}
+            src={newsBg}
             alt={"blog banner"}
             width={1024}
             height={380}

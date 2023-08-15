@@ -34,6 +34,7 @@ const BannerLanding: React.FC<props> = ({assetLanding}) => {
     const [prevButtonOnHover, setPrevButtonOnHover] = useState(false)
     const [nextButtonOnHover, setNextButtonOnHover] = useState(false)
     const [activeIndex, setActiveIndex] = useState(0)
+    const bgBlur = require('../../../public/images/newbg-blur.png');
 
     return (
         <div className={'relative'}>
@@ -94,7 +95,7 @@ const BannerLanding: React.FC<props> = ({assetLanding}) => {
 
             <div className="w-full h-[100px] absolute bottom-[0px]">
                 <Image layout="fixed"
-                    src={'/images/newbg-blur.png'}
+                    src={bgBlur}
                     alt={'image'}
                     width={1920}
                     height={100}

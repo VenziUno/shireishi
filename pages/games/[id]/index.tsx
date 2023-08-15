@@ -47,6 +47,8 @@ const GamesById = () => {
 
     }, [id])
 
+    const corak = require('../../public/images/corak1.png');
+
     return (
         <>
             <LandingLoader isLoading={loading}/>
@@ -96,7 +98,7 @@ const GamesById = () => {
             <div className=" p-4 w-full relative z-30">
                 <div className="absolute w-full left-0 top-[-120px] z-20 ">
                     <Image layout="fixed"
-                        src={'/images/corak1.png'}
+                        src={corak}
                         alt={'corak'}
                         width={1920}
                         height={200}

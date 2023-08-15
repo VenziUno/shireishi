@@ -64,7 +64,7 @@ const AllBlogPage: React.FC = () => {
         }
         setActive(idParams)
     }
-
+    const blogBanner = require('../../public/images/blog-banner.png');
 
     return (
         <>
@@ -78,7 +78,7 @@ const AllBlogPage: React.FC = () => {
                                 className="relative w-full h-[300px] z-[10] bg-gradient-to-r from-[#000000] to-[#000000]"
                             >
                                 <Image layout="fixed"
-                                    src={'/images/blog-banner.png'}
+                                    src={blogBanner}
                                     alt={'blog banner'}
                                     width={1024}
                                     height={300}

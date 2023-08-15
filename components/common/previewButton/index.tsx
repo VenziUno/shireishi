@@ -1,6 +1,4 @@
 import Image from 'next/legacy/image';
-import ChangeLeft from "@/images/arrowLeft.png";
-import Left from "@/images/arrow-left.png";
 import React from "react";
 
 
@@ -14,6 +12,8 @@ interface props {
 
 const PreviewButton: React.FC<props> = (props) => {
     const {onClick, setPrevButtonOnHover, prevButtonOnHover,leftClass,topClass} = props
+    const ChangeLeft = require('../../../public/images/arrowRight.png');
+    const Left  = require('../../../public/images/arrow-right.png');
     return (
         <button
             onClick={onClick}
