@@ -1,51 +1,45 @@
-import React, { useState } from "react";
 import Image from 'next/legacy/image';
+import React from "react";
 
-interface Props {
-    onClick?: () => void;
-    leftClass?: string;
-    topClass?: string;
+
+interface props {
+    onClick?: () => void
+    setPrevButtonOnHover: (e: boolean) => void
+    prevButtonOnHover: boolean
+    leftClass?: string
+    topClass?: string
 }
 
-const PreviewButton: React.FC<Props> = ({
-    onClick,
-    leftClass,
-    topClass
-}) => {
-    const ChangeLeft = require('/images/arrowLeft.png');
-    const Left = require('/images/arrow-left.png');
-    const [prevButtonOnHover, setPrevButtonOnHover] = useState<boolean>(false);
-
-    const handleMouseEnter = () => {
-        setPrevButtonOnHover(true);
-    };
-
-    const handleMouseLeave = () => {
-        setPrevButtonOnHover(false);
-    };
-
+const PreviewButton: React.FC<props> = (props) => {
+    const {onClick, setPrevButtonOnHover, prevButtonOnHover,leftClass,topClass} = props
+    const ChangeLeft = require('../../../public/images/arrowRight.png');
+    const Left  = require('../../../public/images/arrow-right.png');
     return (
         <button
             onClick={onClick}
-            className={`absolute z-[10] ${leftClass} ${topClass}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            className={`absolute z-[10] ${leftClass} ${topClass}`} onMouseEnter={() => setPrevButtonOnHover(true)}
+            onMouseLeave={() => setPrevButtonOnHover(false)}
         >
-            <Image
-                layout="fixed"
-                src={prevButtonOnHover ? ChangeLeft : Left}
-                alt="left"
-                width={36}
-                height={36}
-                className="max-w-[36px]"
-            />
+            {prevButtonOnHover ? (
+                <Image layout="fixed"
+                    src={ChangeLeft}
+                    alt="left"
+                    className="max-w-[36px]"
+                />
+            ) : (
+                <Image layout="fixed"
+                    src={Left}
+                    alt="left"
+                    className="max-w-[36px]"
+                />
+            )}
         </button>
-    );
-};
+    )
+}
+
+export default PreviewButton
 
 PreviewButton.defaultProps = {
     leftClass: 'left-[5%]',
-    topClass: 'top-[42%]'
-};
-
-export default PreviewButton;
+    topClass: 'top-[42%]',
+}
