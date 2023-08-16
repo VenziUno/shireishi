@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Slider from "react-slick";
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import NextButton from "@/components/common/nextButton";
 import PreviewButton from "@/components/common/previewButton";
 import {Banner} from "@/interface/landing";

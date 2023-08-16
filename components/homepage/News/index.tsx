@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from "next/link";
 import SvgComponent from "@/components/common/svgComponent";
 import NextButton from "@/components/common/nextButton";
@@ -182,7 +182,7 @@ const NewsComponent: React.FC<props> = ({ news, blogCategory }) => {
                     className="rounded-[10px] p-14 bg-white font-[Candara]"
                   >
                     <div className="w-full h-full mx-auto rounded-[10px]">
-                      <Image layout="fixed"
+                      <Image
                         src={row.file_link}
                         alt={"image"}
                         width={300}

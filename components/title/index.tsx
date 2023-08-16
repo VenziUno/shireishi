@@ -1,5 +1,5 @@
 import Coret from "@/images/coret-bg.png";
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 interface Props {
   title: string;
